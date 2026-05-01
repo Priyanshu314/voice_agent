@@ -1,0 +1,28 @@
+
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - VAPI_PRIVATE_KEY=${VAPI_PRIVATE_KEY}
+      - VAPI_TWILIO_PHONE_NUMBER_ID=${VAPI_TWILIO_PHONE_NUMBER_ID}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ELEVENLABS_CUSTOM_VOICE_ID=${ELEVENLABS_CUSTOM_VOICE_ID}
+    volumes:
+      - ./prompts:/app/prompts
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: always
