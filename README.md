@@ -4,7 +4,7 @@ A production-grade outbound voice agent system built for the BFSI domain. This s
 
 ## Features Included
 1. **Dynamic Prompt Generation Pipeline:** Uses OpenAI to compile `.md` templates into product-specific guardrail-enforced system prompts.
-2. **Vapi Call Orchestration:** Dispatches calls seamlessly with deeply integrated custom tool calling (`submit_qualification_data`, `transfer_call`).
+2. **Vapi Call Orchestration:** Dispatches calls seamlessly with imported twillio number.
 3. **Advanced Compliance Filtering:** Real-time backend masking of PII (PAN, Aadhaar) before data touches the persistence layer.
 4. **React Dashboard:** A beautiful, responsive glassmorphism dashboard built with React and Vanilla CSS, providing real-time log ingestion and filtering.
 5. **Dockerized Setup:** Fully containerized backend and frontend.
@@ -26,10 +26,5 @@ A production-grade outbound voice agent system built for the BFSI domain. This s
    - **Backend API:** `http://localhost:8000`
    - **Frontend Dashboard:** `http://localhost:8080`
 
-## Documentation & Architecture
-Detailed documentation regarding Intent Taxonomies, Conversation Logic, and the Test Harness can be found in:
-- `docs/architecture.md`
 
-## Enhancements Implemented
-- **Latency Optimizations:** Configured Deepgram ASR (`nova-2`) and ElevenLabs TTS via Vapi for sub-300ms response.
-- **SSML Prosody:** Managed through phonetic phonetic spelling natively handled by ElevenLabs for BFSI acronyms (e.g., "P A N").
+
