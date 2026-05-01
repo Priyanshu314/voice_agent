@@ -2,6 +2,10 @@
 
 A production-grade outbound voice agent system built for the BFSI domain. This system orchestrates real-time, low-latency calls using Vapi, Twilio, OpenAI, and ElevenLabs to qualify leads for Commercial Vehicle Loans.
 
+<img width="719" height="376" alt="image_720" src="https://github.com/user-attachments/assets/5a1ac7c8-dad9-4a94-9408-33ff3e72839d" />
+<img width="716" height="720" alt="image_720" src="https://github.com/user-attachments/assets/bee21f80-a15a-4267-9288-3409b1ebc1ba" />
+
+
 ## Features Included
 1. **Dynamic Prompt Generation Pipeline:** Uses OpenAI to compile `.md` templates into product-specific guardrail-enforced system prompts.
 2. **Vapi Call Orchestration:** Dispatches calls seamlessly with imported twillio number.
